@@ -33,4 +33,4 @@ app.use(bodyParser.json());
 
 app.use(router);
 
-app.listen(port, "0.0.0.0", () => console.log(`Servidor roando na porta ${port}`))
+app.listen(port, () => console.log(`Servidor roando na porta ${port}`))
