@@ -22,10 +22,15 @@ router
 const app = express()
 const port = process.env.PORT || 3000
 
-app.use(cors())
+ const corsOptions = {
+   origin: 'https://dt-money-blue-zeta.vercel.app/',
+   optionsSuccessStatus: 200,
+ };
 
-app.use(bodyParser.json())
+app.use(cors(corsOptions));
 
-app.use(router)
+app.use(bodyParser.json());
+
+app.use(router);
 
 app.listen(port, "0.0.0.0", () => console.log(`Servidor roando na porta ${port}`))
