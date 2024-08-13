@@ -22,12 +22,7 @@ router
 const app = express()
 const port = 3000
 
- const corsOptions = {
-   origin: 'https://dt-money-blue-zeta.vercel.app/',
-   optionsSuccessStatus: 200,
- };
-
-app.use(cors(corsOptions));
+app.use(cors({origin: '*'}));
 
 app.use(bodyParser.json());
 
